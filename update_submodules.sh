@@ -7,8 +7,9 @@ if [ -z "$1" ]; then
 fi
 
 BASE_BRANCH=$1
+CURRENT_YEAR=$(date +%Y)
 CURRENT_MONTH=$(date +%m)
-BRANCH_NAME="2025-${CURRENT_MONTH}-CS-UPDATE-SUBMODULES"
+BRANCH_NAME="${CURRENT_YEAR}-${CURRENT_MONTH}-CS-UPDATE-SUBMODULES"
 
 # Ensure the current directory is a Git repository
 if [ ! -d "$PWD/.git" ]; then
